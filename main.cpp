@@ -24,7 +24,7 @@ int main(){
 	printf("\t\t\t\t\t|_________________________|\n");//
 	printf("\t\t\t\t\t| 2. Filmleri Listele     |\n");//
 	printf("\t\t\t\t\t|_________________________|\n");//   
-	printf("\t\t\t\t\t| 3. Film Guncelle        |\n");// Menünün görünümü
+	printf("\t\t\t\t\t| 3. Film Guncelle        |\n");// Menï¿½nï¿½n gï¿½rï¿½nï¿½mï¿½
 	printf("\t\t\t\t\t|_________________________|\n");//
 	printf("\t\t\t\t\t| 4. Film Sil             |\n");//
 	printf("\t\t\t\t\t|_________________________|\n");//
@@ -37,6 +37,7 @@ int main(){
 	
 	if(menu==1){//film ekleme menusu
 		struct bilgi bilgi;
+		// bu bir yorum satÄ±rÄ±dÄ±r github test.
 			FILE *fp=fopen("dosya.txt","a");			
 			system("cls");
 			printf("kac film eklemek istiyorsunuz?\n");
@@ -68,14 +69,14 @@ int main(){
 			bitis();
 			}
 			}
-		else if(menu==2){//sýralama menusu 
+		else if(menu==2){//sï¿½ralama menusu 
 			FILE *fp=fopen("dosya.txt","r");
 			system("cls");
 			int b=0,hold;			
 				while(fscanf(fp,"%s%s%s%s%d",&bilgi.filmler,&bilgi.yonetmen,&bilgi.senarist,&bilgi.basoy,&bilgi.yil) !=EOF)
 		/*		for(int i=0; i<SIZE; ++i){
 				
-				if(dizi[b].yil<dizi[b+1].yil){  //çalýþmýyor þimdilik....
+				if(dizi[b].yil<dizi[b+1].yil){  //ï¿½alï¿½ï¿½mï¿½yor ï¿½imdilik....
 					hold = dizi[b].yil;
 					dizi[b] = dizi[b+1];
 					dizi[b+1].yil = hold;
@@ -121,8 +122,8 @@ int main(){
 			fprintf(yeni,"%s %s %s %s %d",bilgi.filmler,bilgi.yonetmen,bilgi.senarist,bilgi.basoy,bilgi.yil);
 		}		
 		_fcloseall();
-		remove("dosya.txt");//dosya.txt dosyasý silindi	
-		rename("dosya1.txt", "dosya.txt");//Yeni açýlan dosya yeniden adlandýrýldý
+		remove("dosya.txt");//dosya.txt dosyasï¿½ silindi	
+		rename("dosya1.txt", "dosya.txt");//Yeni aï¿½ï¿½lan dosya yeniden adlandï¿½rï¿½ldï¿½
 			if (a == 0){
 				printf("\nBu film bulunamadi!\n");
 				}
@@ -165,8 +166,8 @@ int main(){
 			fprintf(yeni,"%s\t%s\t%s\t%s\t%d\n",bilgi.filmler,bilgi.yonetmen,bilgi.senarist,bilgi.basoy,bilgi.yil);
 		}
 		_fcloseall();
-		remove("dosya.txt");//dosya.txt dosyasý silindi	
-		rename("dosya1.txt", "dosya.txt");//Yeni açýlan dosya yeniden adlandýrýldý
+		remove("dosya.txt");//dosya.txt dosyasï¿½ silindi	
+		rename("dosya1.txt", "dosya.txt");//Yeni aï¿½ï¿½lan dosya yeniden adlandï¿½rï¿½ldï¿½
 			if (a == 0)
 				printf("\nBu film bulunamadi!\n");
 			
@@ -195,7 +196,7 @@ int main(){
 				while(fscanf(fp,"%s",bilgi.filmler) !=EOF){
 				fscanf(fp, "%s", &bilgi.yonetmen);		// 
 				fscanf(fp, "%s", &bilgi.senarist);		//
-				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diðer bilgiler
+				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diï¿½er bilgiler
 				fscanf(fp, "%d", &bilgi.yil);		//				
 				if (!strcmp(bilgi.filmler, film2)){				
 				printf("Filmin Adi:\t\t%s\nFilmin Yonetmeni:\t%s\nFilmin Senaristi:\t%s\nFilminBasrolu:\t\t%s\nFilmin Yapim Yili:\t%d\n\n",bilgi.filmler,bilgi.yonetmen,bilgi.senarist,bilgi.basoy,bilgi.yil);								
@@ -211,7 +212,7 @@ int main(){
 				while(fscanf(fp,"%s",bilgi.filmler) !=EOF){
 				fscanf(fp, "%s", &bilgi.yonetmen);		// 
 				fscanf(fp, "%s", &bilgi.senarist);		//
-				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diðer bilgiler
+				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diï¿½er bilgiler
 				fscanf(fp, "%d", &bilgi.yil);		//				
 				if (!strcmp(bilgi.yonetmen, yon1)){				
 				printf("Filmin Adi:\t\t%s\nFilmin Yonetmeni:\t%s\nFilmin Senaristi:\t%s\nFilminBasrolu:\t\t%s\nFilmin Yapim Yili:\t%d\n\n",bilgi.filmler,bilgi.yonetmen,bilgi.senarist,bilgi.basoy,bilgi.yil);								
@@ -228,7 +229,7 @@ int main(){
 				while(fscanf(fp,"%s",bilgi.filmler) !=EOF){
 				fscanf(fp, "%s", &bilgi.yonetmen);		// 
 				fscanf(fp, "%s", &bilgi.senarist);		//
-				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diðer bilgiler
+				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diï¿½er bilgiler
 				fscanf(fp, "%d", &bilgi.yil);		//				
 				if (!strcmp(bilgi.senarist, sen1)){				
 				printf("Filmin Adi:\t\t%s\nFilmin Yonetmeni:\t%s\nFilmin Senaristi:\t%s\nFilminBasrolu:\t\t%s\nFilmin Yapim Yili:\t%d\n\n",bilgi.filmler,bilgi.yonetmen,bilgi.senarist,bilgi.basoy,bilgi.yil);								
@@ -244,7 +245,7 @@ int main(){
 				while(fscanf(fp,"%s",bilgi.filmler) !=EOF){
 				fscanf(fp, "%s", &bilgi.yonetmen);		// 
 				fscanf(fp, "%s", &bilgi.senarist);		//
-				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diðer bilgiler
+				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diï¿½er bilgiler
 				fscanf(fp, "%d", &bilgi.yil);		//				
 				if (!strcmp(bilgi.basoy, bas)){				
 				printf("Filmin Adi:\t\t%s\nFilmin Yonetmeni:\t%s\nFilmin Senaristi:\t%s\nFilminBasrolu:\t\t%s\nFilmin Yapim Yili:\t%d\n\n",bilgi.filmler,bilgi.yonetmen,bilgi.senarist,bilgi.basoy,bilgi.yil);								
@@ -260,7 +261,7 @@ int main(){
 				while(fscanf(fp,"%s",bilgi.filmler) !=EOF){
 				fscanf(fp, "%s", &bilgi.yonetmen);		// 
 				fscanf(fp, "%s", &bilgi.senarist);		//
-				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diðer bilgiler
+				fscanf(fp, "%s", &bilgi.basoy);		//Dosyadan okunan diï¿½er bilgiler
 				fscanf(fp, "%d", &bilgi.yil);		//				
 				if ((bilgi.yil==yil)){				
 				printf("Filmin Adi:\t\t%s\nFilmin Yonetmeni:\t%s\nFilmin Senaristi:\t%s\nFilminBasrolu:\t\t%s\nFilmin Yapim Yili:\t%d\n\n",bilgi.filmler,bilgi.yonetmen,bilgi.senarist,bilgi.basoy,bilgi.yil);								
@@ -275,13 +276,13 @@ int main(){
 				fclose(fp); 	}//menu 5 son
 		else if(menu==6){
 		
-		goto cikis;}//cikis satýrýna gider
+		goto cikis;}//cikis satï¿½rï¿½na gider
 		
 		else{	hata();				}
 	cikis:
 	return 0;
 }//main fonksiyonu sonu
-void hata(){//hatalý cevaplara karþý verilen cevap
+void hata(){//hatalï¿½ cevaplara karï¿½ï¿½ verilen cevap
 	int donus2;
 	system("cls");
 			menu1donus:
@@ -297,7 +298,7 @@ void hata(){//hatalý cevaplara karþý verilen cevap
 			printf("Lutfen belirtilen sayilari giriniz\n");
 			goto menu1donus;}
 }
-void bitis(){//menu sonlarý için ana menüye dönüþ ya da kapatmak için fonksiyon
+void bitis(){//menu sonlarï¿½ iï¿½in ana menï¿½ye dï¿½nï¿½ï¿½ ya da kapatmak iï¿½in fonksiyon
 	int donus4;
 	printf("1. Ana Menuye Don\n");
 	printf("2. Uygulamayi kapat\n");
